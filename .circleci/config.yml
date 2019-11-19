@@ -9,6 +9,3 @@ jobs:
       - run:
           name: Build image
           command:  docker build -t citest -f Dockerfile.dev .
-      - run:
-          name: Run testes
-          command: docker run -e CI=true citest npm run test
