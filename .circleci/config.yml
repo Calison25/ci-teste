@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: docker:17.05.0-ce-git
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build image
+          command:  docker build -t citest -f Dockerfile.dev .
+      - run:
+          name: Run testes
+          command: docker run -e CI=true citest npm run test
