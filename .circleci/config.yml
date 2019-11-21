@@ -12,3 +12,6 @@ jobs:
       - run:
           name: Run testes
           command: docker run -e CI=true citest npm run test
+      - run:
+          name: Run Script
+          command: ./show.sh
