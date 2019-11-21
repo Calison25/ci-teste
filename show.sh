@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 COLOR_CYAN='\033[0;36m'
 NO_COLOR='\033[0m'
