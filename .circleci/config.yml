@@ -15,4 +15,4 @@ jobs:
           command: docker run -e CI=true citest npm run test
       - run:
           name: Run Script
-          command: sh ./show.sh
+          command: docker run -t citest sh ./show.sh
